@@ -1,4 +1,4 @@
-# Rpi0-headless-OTG
+## Rpi0-headless-OTG
 Setup for a headless Raspberry Pi Zero 2W
 
 # Step1: Install Raspberry Pi OS via Raspberry Pi Imager: https://www.raspberrypi.com/software/
