@@ -49,30 +49,30 @@ By now, macOS uses Samba as its default network sharing protocol. So you can ins
 
 - By default, Samba allows access to the home folder of the logged in user so no further shares need to be configured if you just want access to your home folder. Again, macOS does not like using standard UNIX accounts for authenticating with Samba, so we need to set a dedicated Samba password.
 
-To do so:
+- To do so:
   - sudo smbpasswd -a pi
 
 - Where pi refers to the user account on the Raspberry Pi you want to connect to.
 
 - By default, Samba exposes home folders as read-only. To change that, modify Samba’s main config file smb.conf:
-  sudo nano /etc/samba/smb.conf
+  - sudo nano /etc/samba/smb.conf
 
 - In there, scroll down to the [homes] section and set read only = no to make shared home folders writable.
 
 - To share more resources like an external drive, add another section at the end of your smb.conf and make it fully writable:
 
 [homes]
-   comment = Home Directories
-   browseable = no
+   - comment = Home Directories
+   - browseable = no
 
 By default, the home directories are exported read-only. Change the next parameter to 'no' if you want to be able to write to them.
-   read only = no
-   public = yes
-   writable = yes
+   - read only = no
+   - public = yes
+   - writable = yes
 
 
 After setting a new password and modifying smb.conf, restart the Samba service:
-sudo service smbd restart
+- sudo service smbd restart
 
 Open “Finder” on Mac -> Click “Go” and click “Connect to Server . . . “ -> “Connect to Server” dialog, enter “smb://rpi0-1.local (hostname)” into the Server Address, and click “Connect”
 
