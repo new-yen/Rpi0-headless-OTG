@@ -40,7 +40,7 @@ wiringPi issue:
 - sudo dpkg -i wiringpi-latest.deb
 
 
-#Additional Setup:
+# Additional Setup:
 
 - File Sharing with Samba:
 By now, macOS uses Samba as its default network sharing protocol. So you can install it on the Raspberry Pi and macOS will handle it:
