@@ -44,13 +44,13 @@ wiringPi issue:
 
 - File Sharing with Samba:
 By now, macOS uses Samba as its default network sharing protocol. So you can install it on the Raspberry Pi and macOS will handle it:
-  sudo apt update && sudo apt upgrade
-  sudo apt install samba samba-common-bin
+  - sudo apt update && sudo apt upgrade
+  - sudo apt install samba samba-common-bin
 
 - By default, Samba allows access to the home folder of the logged in user so no further shares need to be configured if you just want access to your home folder. Again, macOS does not like using standard UNIX accounts for authenticating with Samba, so we need to set a dedicated Samba password.
 
-  To do so:
-  sudo smbpasswd -a pi
+To do so:
+  - sudo smbpasswd -a pi
 
 - Where pi refers to the user account on the Raspberry Pi you want to connect to.
 
