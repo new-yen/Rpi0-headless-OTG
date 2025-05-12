@@ -22,20 +22,19 @@ https://www.youtube.com/watch?v=9fEnvDgxwbI&ab_channel=SamWestbyTech
 
 ##  Fix Issues
 
-Locale issue: 
-Check status: 
-locale
+Locale issue/Check status: 
+- locale
 
 Execute:
-echo "LC_ALL=en_US.UTF-8" | sudo tee -a /etc/environment
-echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
-echo "LANG=en_US.UTF-8" | sudo tee -a /etc/locale.conf
-sudo locale-gen en_US.UTF-8
+- echo "LC_ALL=en_US.UTF-8" | sudo tee -a /etc/environment
+- echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
+- echo "LANG=en_US.UTF-8" | sudo tee -a /etc/locale.conf
+- sudo locale-gen en_US.UTF-8
 
 
 wiringPi issue:
 
-cd /tmp
-wget https://project-downloads.drogon.net/wiringpi-latest.deb
-sudo dpkg -i wiringpi-latest.deb
+- cd /tmp
+- wget https://project-downloads.drogon.net/wiringpi-latest.deb
+- sudo dpkg -i wiringpi-latest.deb
 
