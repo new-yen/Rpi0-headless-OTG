@@ -1,0 +1,14 @@
+[Unit]
+Description=RFID Audio Player Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+WorkingDirectory=/home/pi/rfid-to-mp3/
+ExecStart=/home/pi/pi-rfid/env/bin/python3 /home/pi/rfid-to-mp3/code.py
+Restart=always
+#KillMode=process
+
+[Install]
+WantedBy=multi-user.target
